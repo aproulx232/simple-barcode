@@ -1,9 +1,10 @@
 "use client";
+import JsBarcode from "jsbarcode";
 import Script from "next/script";
 import styled from "styled-components";
 
 export default function Home() {
-  function handleSubmit(e) {
+  function handleSubmit(e: { preventDefault: () => void; target: any; }) {
     // Prevent the browser from reloading the page
     e.preventDefault();
 
