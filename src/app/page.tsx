@@ -2,8 +2,6 @@
 import styled from "styled-components";
 
 export default function Home() {
-
-
   function handleSubmit(e) {
     // Prevent the browser from reloading the page
     e.preventDefault();
@@ -23,8 +21,8 @@ export default function Home() {
 
       <form onSubmit={handleSubmit}>
         <InputContainer>
-          <input name="barcodeInput" placeholder="Enter Barcode Value" />
-          <button type="submit">Submit form</button>
+          <Input name="barcodeInput" placeholder="Enter Barcode Value" />
+          <SubmitButton type="submit">Submit form</SubmitButton>
         </InputContainer>
       </form>
 
@@ -38,15 +36,26 @@ export default function Home() {
 const Main = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
 `;
 
+const Input = styled.input`
+  margin: 1rem;
+  height: 2rem;
+`;
+
+const SubmitButton = styled.button`
+  margin: 1rem;
+  height: 2rem;
+  width: 10rem;
+`
 const BarcodeContainer = styled.div`
   justify-content: space-between;
   align-items: center;
+  height: 5rem;
+  
 `;
 
 const InputContainer = styled.div`
