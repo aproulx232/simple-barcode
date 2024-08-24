@@ -1,6 +1,5 @@
 "use client";
 import JsBarcode from "jsbarcode";
-import Script from "next/script";
 import styled from "styled-components";
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
 
   return (
     <Main>
-      <Script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js" />
       <form onSubmit={handleSubmit}>
         <InputContainer>
           <Input name="barcodeInput" placeholder="Enter Barcode Value" />
